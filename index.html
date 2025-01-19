@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Számológép</title>
+  <link rel="stylesheet" href="style2.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <form action="#" name="calculator_form">
+      <input type="text" name="answer" /> <!--A műveletlánc kialakítása konkatenációval.-->
+      <div class="buttons num_sys_buttons">
+        <input type="button" value="bin"
+          onclick="calculator_form.answer.value = num_sys_change(calculator_form.answer.value, BIN, this)" />
+        <input type="button" value="oct"
+          onclick="calculator_form.answer.value = num_sys_change(calculator_form.answer.value, OCT, this)" />
+        <input type="button" class="num_sys_button_selected" value="dec"
+          onclick="calculator_form.answer.value = num_sys_change(calculator_form.answer.value, DEC, this)" />
+        <input type="button" value="hex"
+          onclick="calculator_form.answer.value = num_sys_change(calculator_form.answer.value, HEX, this)" />
+      </div>
+      <div class="buttons margin_removal">
+        <input type="button" value="log" onclick="calculator_form.answer.value += 'log('" />
+        <input type="button" value="log&#x2081;&#x2080;"
+          onclick="calculator_form.answer.value += 'log&#x2081;&#x2080;('" />
+        <input type="button" value="AC" onclick="calculator_form.answer.value = ''" />
+        <input type="button" value="DEL"
+          onclick="calculator_form.answer.value = calculator_form.answer.value.substr(0 , calculator_form.answer.value.length -1)" />
+      </div>
+      <div class="buttons">
+        <input type="button" value="sin" onclick="calculator_form.answer.value += 'sin('" />
+        <input type="button" value="cos" onclick="calculator_form.answer.value += 'cos('" />
+        <input type="button" value="x&#x207f;" onclick="calculator_form.answer.value += '^'" />
+        <input type="button" value="√n" onclick="calculator_form.answer.value += '√'" />
+      </div>
+      <div class="buttons">
+        <input type="button" value="tan" onclick="calculator_form.answer.value += 'tan('" />
+        <input type="button" value="(" onclick="calculator_form.answer.value += '('" />
+        <input type="button" value=")" onclick="calculator_form.answer.value += ')'" />
+        <input type="button" value="/" onclick="calculator_form.answer.value += '/'" />
+      </div>
+      <div class="buttons">
+        <input type="button" value="7" onclick="calculator_form.answer.value += '7'" />
+        <input type="button" value="8" onclick="calculator_form.answer.value += '8'" />
+        <input type="button" value="9" onclick="calculator_form.answer.value += '9'" />
+        <input type="button" value="*" onclick="calculator_form.answer.value += '*'" />
+      </div>
+      <div class="buttons">
+        <input type="button" value="4" onclick="calculator_form.answer.value += '4'" />
+        <input type="button" value="5" onclick="calculator_form.answer.value += '5'" />
+        <input type="button" value="6" onclick="calculator_form.answer.value += '6'" />
+        <input type="button" value="-" onclick="calculator_form.answer.value += '-'" />
+      </div>
+      <div class="buttons">
+        <input type="button" value="1" onclick="calculator_form.answer.value += '1'" />
+        <input type="button" value="2" onclick="calculator_form.answer.value += '2'" />
+        <input type="button" value="3" onclick="calculator_form.answer.value += '3'" />
+        <input type="button" value="+" onclick="calculator_form.answer.value += '+'" />
+      </div>
+      <div class="buttons">
+        <input type="button" value="." onclick="calculator_form.answer.value += '.'" />
+        <input type="button" value="0" onclick="calculator_form.answer.value += '0'" />
+        <!--Faktoriális számítását végző függvény közvetlen hívása. Paraméterben a beviteli mező tartalma kerül átadásra.-->
+        <input type="button" value="n!" onclick="calculator_form.answer.value = fact(calculator_form.answer.value);" />
+        <!--A Math osztály hozzáfűzése a függvényekhez.
+        A parse expression (parseExpr) függvény a négyzetreemelés és a gyökvonás jeleket cseréli függvényhívásokra, függvényparaméterek és zárójelek elhelyezésével.-->
+        <input type="button" value="=" onclick="
+          calculator_form.answer.value = eval(parseExpr(calculator_form.answer.value).replace('sin', 'Math.sin').replace('cos', 'Math.cos').replace('tan', 'Math.tan').replace('log', 'Math.log').replace('₁', '1').replace('₀', '0'))
+          " />
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
