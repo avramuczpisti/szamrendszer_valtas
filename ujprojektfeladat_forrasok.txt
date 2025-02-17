@@ -1,1 +1,23 @@
 https://www.inf.u-szeged.hu/~vargalg/oktatas/assembly_18t/tananyag/tvltsok.html
+
+10-esből X-esbe
+Átváltás menete:
+1. Készítsünk egy 2-oszlopos táblázatot
+2. Írjuk fel a számot a bal felső sarokba
+3. Osszuk el a számot X-szel
+a) Az osztás eredményét írjuk a szám alá
+b) Az osztás maradékát írjuk a szám mellé
+4. Az osztást ismételgessük, amíg a bal
+oldalon 0-t nem kapunk
+5. A jobb oldali oszlop számjegyeit
+olvassuk össze lentről felfelé
+
+
+X-esből 10-esbe
+Átváltás menete:
+1. Írjuk fel az átváltandó számot
+2. Írjuk a számjegyek fölé X hatványait
+3. Szorozzuk össze a számjegyeket a
+fölöttük lévő hatványokkal
+4. Adjuk össze a szorzatokat
+5. Az összeg lesz a végeredmény
