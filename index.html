@@ -3,11 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Számológép</title>
+  <title>Számológép-átváltás</title>
   <link rel="stylesheet" href="style2.css" />
   <script src="script.js"></script>
+  <style>
+    /* A modal alapstílusai */
+    .modal {
+        display: none; /* Alapértelmezés szerint rejtett */
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    /* A modal tartalmának stílusai */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 650px;
+    }
+
+    /* A bezáró gomb stílusai */
+    .close2 {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
+  <div class="tartalom">
   <div class="container">
     <form action="#" name="calculator_form">
       <input type="text" name="answer" /> <!--A műveletlánc kialakítása konkatenációval.-->
@@ -71,6 +111,82 @@
           " />
       </div>
     </form>
+  </div> <!--container class vége-->
+
+ <hr>
+      
+  
+  <h2>Felugró ablak példa</h2>
+  
+  <!-- A gomb, amely megnyitja a modalt -->
+  <button id="myBtn">Felugró ablak megnyitása</button>
+  
+  <!-- A modal -->
+  <div id="myModal" class="modal">
+  
+    <!-- A modal tartalma -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Ez egy egyszerű felugró ablak példa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium, perferendis ut hic dignissimos sequi unde exercitationem voluptatum ipsam consequatur laudantium, ipsa eius consectetur sunt? Quos maiores ea temporibus aut.
+      Expedita fugiat, quasi, placeat itaque nisi sit voluptatibus deserunt fugit quis alias nihil ex reprehenderit similique nam fuga temporibus repellat ipsam assumenda, aspernatur dignissimos? Alias fuga veniam aut deserunt hic.
+      Soluta deleniti maxime, nostrum, aliquid ipsam, necessitatibus eligendi nam unde explicabo officia amet autem? Quaerat, officiis, ipsum eveniet minima inventore perferendis neque eaque quisquam soluta itaque excepturi consectetur pariatur aliquid!
+      Excepturi odio, placeat, aspernatur corporis ab fuga assumenda hic, sint unde impedit quod? Ea harum cupiditate nesciunt minima inventore a repellat aut ducimus cum ut, eveniet sequi quod blanditiis obcaecati.
+      Exercitationem a magni dicta enim provident alias corporis hic blanditiis, nisi at corrupti ea culpa aliquam quia non sit. Ex distinctio laudantium alias, a ducimus iusto aperiam architecto sequi ipsa.
+      Possimus voluptate accusamus accusantium quisquam repudiandae quod rem, distinctio minima maiores atque culpa saepe placeat nulla enim quaerat nihil rerum illum voluptatem expedita voluptatum! Consequatur accusantium alias praesentium odio quae.
+      Reprehenderit enim nulla dolorum aut culpa ipsam nobis beatae architecto rem quod quibusdam corrupti dolore totam quidem unde neque, similique et labore eum, consequatur, deserunt odit nemo adipisci cum? Fuga?
+      Quis, laudantium tempore reprehenderit molestias adipisci repellat natus reiciendis explicabo minus a? Minima at illum, natus neque vero ipsa? Animi unde voluptatum deleniti? Ducimus aliquam rerum, totam consequatur veniam tempora.
+      Ex accusantium earum vitae ipsam rerum alias aliquid voluptates. Quo repellendus nam eaque quod facere? Sapiente error, minus, voluptate temporibus laboriosam similique quibusdam accusantium aut magnam quam exercitationem perspiciatis explicabo.
+      Sit ullam, placeat maxime error harum non. Facere esse nemo fuga in vitae, necessitatibus ratione repudiandae unde sequi quos nihil deserunt quas fugiat exercitationem explicabo, aut et labore culpa? Qui!</p>
+    </div>
+  
   </div>
+
+  <!-- A gomb, amely megnyitja a modalt -->
+  <button id="myBtn2">Felugró ablak megnyitása mégegy</button>
+  
+  <!-- A modal -->
+  <div id="myModal2" class="modal">
+  
+    <!-- A modal tartalma -->
+    <div class="modal-content">
+      <span class="close2">&times;</span>
+      <p>ez is egy példa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium, perferendis ut hic dignissimos sequi unde exercitationem voluptatum ipsam consequatur laudantium, ipsa eius consectetur sunt? Quos maiores ea temporibus aut.
+      Expedita fugiat, quasi, placeat itaque nisi sit voluptatibus deserunt fugit quis alias nihil ex reprehenderit similique nam fuga temporibus repellat ipsam assumenda, aspernatur dignissimos? Alias fuga veniam aut deserunt hic.
+      Soluta deleniti maxime, nostrum, aliquid ipsam, necessitatibus eligendi nam unde explicabo officia amet autem? Quaerat, officiis, ipsum eveniet minima inventore perferendis neque eaque quisquam soluta itaque excepturi consectetur pariatur aliquid!
+      Excepturi odio, placeat, aspernatur corporis ab fuga assumenda hic, sint unde impedit quod? Ea harum cupiditate nesciunt minima inventore a repellat aut ducimus cum ut, eveniet sequi quod blanditiis obcaecati.
+      Exercitationem a magni dicta enim provident alias corporis hic blanditiis, nisi at corrupti ea culpa aliquam quia non sit. Ex distinctio laudantium alias, a ducimus iusto aperiam architecto sequi ipsa.
+      Possimus voluptate accusamus accusantium quisquam repudiandae quod rem, distinctio minima maiores atque culpa saepe placeat nulla enim quaerat nihil rerum illum voluptatem expedita voluptatum! Consequatur accusantium alias praesentium odio quae.
+      Reprehenderit enim nulla dolorum aut culpa ipsam nobis beatae architecto rem quod quibusdam corrupti dolore totam quidem unde neque, similique et labore eum, consequatur, deserunt odit nemo adipisci cum? Fuga?
+      Quis, laudantium tempore reprehenderit molestias adipisci repellat natus reiciendis explicabo minus a? Minima at illum, natus neque vero ipsa? Animi unde voluptatum deleniti? Ducimus aliquam rerum, totam consequatur veniam tempora.
+      Ex accusantium earum vitae ipsam rerum alias aliquid voluptates. Quo repellendus nam eaque quod facere? Sapiente error, minus, voluptate temporibus laboriosam similique quibusdam accusantium aut magnam quam exercitationem perspiciatis explicabo.
+      Sit ullam, placeat maxime error harum non. Facere esse nemo fuga in vitae, necessitatibus ratione repudiandae unde sequi quos nihil deserunt quas fugiat exercitationem explicabo, aut et labore culpa? Qui!</p>
+    </div>
+  
+  </div>
+</div> <!--tartalom class vége--> 
+  <script>
+      // A modal elemek
+      var modal = document.getElementById("myModal2");
+      var btn = document.getElementById("myBtn2");
+      var span = document.getElementsByClassName("close2")[0];
+  
+      // A modal megnyitása a gombra kattintva
+      btn.onclick = function() {
+          modal.style.display = "block";
+      }
+  
+      // A modal bezárása az X-re kattintva
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+  
+      // A modal bezárása, ha a felhasználó a modalon kívülre kattint
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+  </script>
+
 </body>
 </html>
