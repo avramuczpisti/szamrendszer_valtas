@@ -5,19 +5,19 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 body {
-  /*A body tag-re alkalmzott stílus beállítások.*/
+  /* A body tag-re alkalmzott stílus beállítások. */
+  overflow: auto;
   height: 100vh;
-  width: 100%;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(to right, #fa7099 0%, #fee140 100%);
 }
+
 .container {
   /*Befoglaló elem (div) stílus beállításai.*/
-  z-index: 12;
   width: 420px;
   padding: 15px;
   border-radius: 12px;
@@ -26,6 +26,7 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
+
 .container input[type="text"] {
   /*Adatbeviteli mezőre alkalmazott stílusok.*/
   width: 100%;
@@ -39,6 +40,7 @@ body {
   padding-right: 10px;
   background: transparent;
 }
+
 .container input[type="button"] {
   /*Parancsgombok stílusbeállításai.*/
   height: 75px;
@@ -53,6 +55,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .num_sys_buttons input[type="button"] {
   /*Számrendszer gombok stílusa.*/
   margin-top: 0px;
@@ -60,18 +63,32 @@ body {
   font-size: larger;
   letter-spacing: 2px;
 }
+
 .num_sys_buttons input[class="num_sys_button_selected"] {
   /*Alapértelmezetten kiválasztott számrendszer gomb stílusa.*/
   color: #fa7099;
 }
+
 .margin_removal input[type="button"] {
   margin-top: 0px;
 }
+
 .container input[type="button"]:hover {
   /*Parancsgombok háttérstílusa 'hover' esemény esetén.*/
   background: rgba(255, 255, 255, 0.15);
 }
+
 .container input[type="button"]:active {
   /*Parancsgombok háttérstílusa 'active' esemény esetén.*/
   background: rgba(255, 255, 255, 0.4);
+}
+
+.tartalom {
+  display: block;
+}
+
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1.5px solid white;
 }
