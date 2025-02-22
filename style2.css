@@ -75,3 +75,11 @@ body {
   /*Parancsgombok háttérstílusa 'active' esemény esetén.*/
   background: rgba(255, 255, 255, 0.4);
 }
+.small_buttons input[type="button"]{
+  font-size: 2vh;
+  height: 3vh;
+  width: 3vh;
+}
+.small_buttons input[type="button"]:hover{
+  background: none;
+}
