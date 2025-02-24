@@ -83,3 +83,6 @@ body {
 .small_buttons input[type="button"]:hover{
   background: none;
 }
+p{
+  text-align: justify;
+}

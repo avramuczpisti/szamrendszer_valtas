@@ -93,3 +93,19 @@ function clear_selected_num_sys() {
 function set_selected_num_sys(selected_button) {
     selected_button.classList.add('num_sys_button_selected');
 }
+
+function kettesQuizMegnyitasa(){
+    window.open('tizenhatos_quiz.html')
+}
+
+function nyolcasQuizMegnyitasa(){
+    window.open('tizenhatos_quiz.html')
+}
+
+function tizesQuizMegnyitasa(){
+    window.open('tizenhatos_quiz.html')
+}
+
+function tizenhatosQuizMegnyitasa(){
+    window.open('tizenhatos_quiz.html')
+}
