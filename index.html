@@ -12,15 +12,14 @@
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
   <script src="script.js"></script>
-  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="style_main.css" />
 
 </head>
 
 <body>
-
   <div class="container">
     <div class="small_buttons">
-      <input type="button" value="?" onclick="" data-toggle="modal" data-target="#helpModal"
+      <img src="inform.png" onclick="" data-toggle="modal" data-target="#helpModal"
         title="Információk a számrendszerekről" />
     </div>
     <form action="#" name="calculator_form">
@@ -87,6 +86,7 @@
     </form>
   </div>
 
+<!--modal/felugró ablak-->
   <div class="modal" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document"
       style="max-height:85%;  margin-top: 50px; margin-bottom:50px; overflow-y: initial !important">
@@ -154,6 +154,30 @@
             3×256 + 15×16 + 8×1 = 768+ 240 + 8 = 1016).
           </p>
           <button type="button" class="btn btn-secondary" onclick="tizenhatosQuizMegnyitasa()">Kvíz</button>
+          <hr style="border: 1.5px solid rgb(108, 117, 125);">
+          <h5>Átváltás</h5><br>
+          <p>
+            10-esből X-esbe<br>
+            Átváltás menete: <br>
+            1. Készítsünk egy 2-oszlopos táblázatot<br>
+            2. Írjuk fel a számot a bal felső sarokba<br>
+            3. Osszuk el a számot X-szel<br>
+            a) Az osztás eredményét írjuk a szám alá<br>
+            b) Az osztás maradékát írjuk a szám mellé<br>
+            4. Az osztást ismételgessük, amíg a bal
+            oldalon 0-t nem kapunk<br>
+            5. A jobb oldali oszlop számjegyeit
+            olvassuk össze lentről felfelé
+            <br><br>
+            X-esből 10-esbe<br>
+            Átváltás menete:<br>
+            1. Írjuk fel az átváltandó számot<br>
+            2. Írjuk a számjegyek fölé X hatványait<br>
+            3. Szorozzuk össze a számjegyeket a
+            fölöttük lévő hatványokkal<br>
+            4. Adjuk össze a szorzatokat<br>
+            5. Az összeg lesz a végeredmény<br>
+          </p>
         </div>
         <div class="modal-footer">  
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Bezár</button>

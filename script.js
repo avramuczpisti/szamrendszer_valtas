@@ -95,15 +95,15 @@ function set_selected_num_sys(selected_button) {
 }
 
 function kettesQuizMegnyitasa(){
-    window.open('tizenhatos_quiz.html')
+    window.open('kettes_quiz.html')
 }
 
 function nyolcasQuizMegnyitasa(){
-    window.open('tizenhatos_quiz.html')
+    window.open('nyolcas_quiz.html')
 }
 
 function tizesQuizMegnyitasa(){
-    window.open('tizenhatos_quiz.html')
+    window.open('tizes_quiz.html')
 }
 
 function tizenhatosQuizMegnyitasa(){
